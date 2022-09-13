@@ -28,7 +28,7 @@ public class ServicoGeocode {
             nomeHotel = nomeHotel.replace(" ","%20");
             HttpRequest request = HttpRequest.newBuilder()
                     .uri(URI.create("https://geocode-forward-and-reverse.p.rapidapi.com/forward?address=Hotel%20"+nomeHotel+"%20in%20" + localidade))
-                    .header("X-RapidAPI-Key", "34fc55e7c0mshe8b9d757743821cp1cd6d9jsn15c26f8282ba")
+                    .header("X-RapidAPI-Key", "5e8195b1ecmsh67c54c7110f69b9p1111eajsnd134d4bad209")
                     .header("X-RapidAPI-Host", "geocode-forward-and-reverse.p.rapidapi.com")
                     .method("GET", HttpRequest.BodyPublishers.noBody())
                     .build();
