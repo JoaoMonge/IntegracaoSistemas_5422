@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0e2fd70b-d557-437f-9734-1daf2cf08a28" name="Changes" comment="Readme">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="0e2fd70b-d557-437f-9734-1daf2cf08a28" name="Changes" comment="Alteração do caminho para o ficheiro jaspersoft">
       <change beforePath="$PROJECT_DIR$/src/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ServicoGeocode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ServicoGeocode.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +71,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663075227017</updated>
-      <workItem from="1663075228424" duration="14424000" />
+      <workItem from="1663075228424" duration="14522000" />
     </task>
     <task id="LOCAL-00001" summary="Solve initial commit problem">
       <created>1663086938473</created>
@@ -117,7 +115,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663088411119</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Alteração do caminho para o ficheiro jaspersoft">
+      <created>1663090505947</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1663090505947</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,6 +145,7 @@
     <MESSAGE value="Adicionado JasperReport" />
     <MESSAGE value="Adicionado o refresh rate que permite modificar mais facilmente o tempo em que se verifica se existe uma nova reserva." />
     <MESSAGE value="Readme" />
-    <option name="LAST_COMMIT_MESSAGE" value="Readme" />
+    <MESSAGE value="Alteração do caminho para o ficheiro jaspersoft" />
+    <option name="LAST_COMMIT_MESSAGE" value="Alteração do caminho para o ficheiro jaspersoft" />
   </component>
 </project>
