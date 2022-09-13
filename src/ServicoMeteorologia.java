@@ -34,7 +34,8 @@ public class ServicoMeteorologia {
                     .method("GET", HttpRequest.BodyPublishers.noBody())
                     .build();
             HttpResponse<String> response = HttpClient.newHttpClient().send(request, HttpResponse.BodyHandlers.ofString());
-            System.out.println(response.body());
+
+            //Transformar o resultado do pedido GET em JSON para ser mais fácil de trabalhar em código JAVA
             JSONObject object = new JSONObject(response.body());
             return object;
         }catch(Exception e){

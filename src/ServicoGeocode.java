@@ -14,7 +14,6 @@ import java.net.http.HttpResponse;
 public class ServicoGeocode {
 
     public ServicoGeocode(){
-
     }
 
     /**
@@ -34,8 +33,8 @@ public class ServicoGeocode {
                     .method("GET", HttpRequest.BodyPublishers.noBody())
                     .build();
             HttpResponse<String> response = HttpClient.newHttpClient().send(request, HttpResponse.BodyHandlers.ofString());
-            System.out.println(response.body());
-            //Transformar o resultado do pedido GET em JSON para ser mais fácil de trabalhar
+
+            //Transformar o resultado do pedido GET em JSON para ser mais fácil de trabalhar em código JAVA
             JSONObject coords = new JSONObject(response.body());
             return coords;
         }catch(Exception e){

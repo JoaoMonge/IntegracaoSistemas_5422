@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0e2fd70b-d557-437f-9734-1daf2cf08a28" name="Changes" comment="">
+    <list default="true" id="0e2fd70b-d557-437f-9734-1daf2cf08a28" name="Changes" comment="Solve initial commit problem">
+      <change afterPath="$PROJECT_DIR$/src/Constants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IntegracaoSistemas.iml" beforeDir="false" afterPath="$PROJECT_DIR$/IntegracaoSistemas.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DatabaseConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DatabaseConnector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ServicoGeocode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ServicoGeocode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ServicoMeteorologia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ServicoMeteorologia.java" afterDir="false" />
     </list>
@@ -70,8 +69,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663075227017</updated>
-      <workItem from="1663075228424" duration="11272000" />
+      <workItem from="1663075228424" duration="11851000" />
     </task>
+    <task id="LOCAL-00001" summary="Solve initial commit problem">
+      <created>1663086938473</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1663086938473</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -88,15 +95,8 @@
       </map>
     </option>
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Main.java</url>
-          <line>24</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Solve initial commit problem" />
+    <option name="LAST_COMMIT_MESSAGE" value="Solve initial commit problem" />
   </component>
 </project>

@@ -6,11 +6,15 @@ import net.sf.jasperreports.view.JasperViewer;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import java.awt.*;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.HashMap;
+
+
+
 
 
 /**
@@ -19,22 +23,21 @@ import java.util.HashMap;
 public class DatabaseConnector {
 
     public DatabaseConnector(){
-
     }
 
     /**
      * Este método obtêm todas as reservas e contêm lógica para obter apenas as inseridas recentemente.
-     * @param count -> Indica a partir de qual registo devemos verificar se foi inserida uma nova entrada
+     * @param contagem_old_reservas -> Indica a partir de qual registo devemos verificar se foi inserida uma nova entrada
      * @return última contagem de reservas existentes na base de dados
      */
-    public int getReservas(int count){
+    public int getReservas(int contagem_old_reservas){
         try {
             //Carrega o driver do jdbc para conectar ao MySql
             Class.forName("com.mysql.cj.jdbc.Driver");
 
             //Conecta-se à base de dados
             Connection con = DriverManager.getConnection(
-                    "jdbc:mysql://localhost:3306/Hotel_5086?characterEncoding=utf8", "root", "p@ssw0rd");
+                    Constants.DATABASE_URL, Constants.DATABASE_USER, Constants.DATABASE_PASSWORD);
 
             //Executa uma query que devolve o conjunto Reserva,Reserva_Quartos,Hotel ordenado pela data de entrada no quarto.
             Statement stmt = con.createStatement();
@@ -42,13 +45,12 @@ public class DatabaseConnector {
                     "WHERE r.Numero_Reserva = rq.Numero_Reserva AND rq.Sigla_Hotel = h.Sigla_Hotel ORDER BY r.Dia_Entrada ASC;");
 
 
-            //O counter a 0 vai servir para ignorar antigas reservas
-            int counter = 0;
+            //O contagem_total_reservas a 0 vai servir para ignorar antigas reservas
+            int contagem_total_reservas = 0;
             while (rs.next()) {
-                ++counter;
-
-                //Detetar uma nova reserva
-                if(counter > count){
+                ++contagem_total_reservas;
+                //Deteta uma nova reserva sempre que o
+                if(contagem_total_reservas > contagem_old_reservas){
                     //Detectada nova Reserva.
 
                     //1º Obter o geocode do hotel
@@ -60,10 +62,9 @@ public class DatabaseConnector {
                     ServicoMeteorologia meteo = new ServicoMeteorologia();
                     JSONObject previsao = meteo.obterPrevisao5Dias(String.valueOf(location.getDouble("lat")),String.valueOf(location.getDouble("lng")));
 
-                    System.out.println(previsao.toString());
 
                     //3º Gerar o Report feito no JasperSoft
-                    JasperReport jr = JasperCompileManager.compileReport("/Users/joaomonge/JaspersoftWorkspace/MyReports/ConfirmacaoReserva.jrxml");
+                    JasperReport jr = JasperCompileManager.compileReport(Constants.FILEPATH_JASPERREPORT);
 
                     JSONArray array = (JSONArray) previsao.get("data");
                     JSONObject prev1 = (JSONObject) array.get(0);
@@ -82,14 +83,13 @@ public class DatabaseConnector {
                     params.put("Dia5_Meteo",description);
 
 
+                    //Jasperprint recebe o ficheiro JasperReport linha 64 mais os parametros e a conexao à base de dados
                     JasperPrint jp = JasperFillManager.fillReport(jr,params, con);
                     JasperViewer.viewReport(jp);
-
                 }
-
             }
             con.close();
-            return counter;
+            return contagem_total_reservas;
         }catch(Exception e){
             System.out.println(e);
             return 0;
