@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="net.sf.jasperreports.fonts" type="repository">
+    <properties maven-id="net.sf.jasperreports:jasperreports-fonts:6.20.0" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/net/sf/jasperreports/jasperreports-fonts/6.20.0/jasperreports-fonts-6.20.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
