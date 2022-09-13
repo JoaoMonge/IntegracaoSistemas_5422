@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0e2fd70b-d557-437f-9734-1daf2cf08a28" name="Changes" comment="Adicionado o refresh rate que permite modificar mais facilmente o tempo em que se verifica se existe uma nova reserva.">
-      <change beforePath="$PROJECT_DIR$/src/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Constants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReadMe.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +71,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663075227017</updated>
-      <workItem from="1663075228424" duration="12496000" />
+      <workItem from="1663075228424" duration="12778000" />
     </task>
     <task id="LOCAL-00001" summary="Solve initial commit problem">
       <created>1663086938473</created>
@@ -101,7 +101,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663087899020</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Adicionado o refresh rate que permite modificar mais facilmente o tempo em que se verifica se existe uma nova reserva.">
+      <created>1663088152797</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1663088152797</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
