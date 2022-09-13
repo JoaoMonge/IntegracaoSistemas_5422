@@ -1,9 +1,4 @@
 import net.sf.jasperreports.engine.*;
-import net.sf.jasperreports.view.JasperViewer;
-import org.json.JSONObject;
-
-import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.SQLException;
 
 import java.util.Timer;
@@ -11,7 +6,7 @@ import java.util.TimerTask;
 
 public class Main {
 
-    public static void main(String[] args) throws JRException, ClassNotFoundException, SQLException {
+    public static void main(String[] args){
 
 
 
@@ -26,7 +21,7 @@ public class Main {
                 count[0] = db.getReservas(count[0]);
 
             }
-        }, 0, 120 * 1000);
+        }, 0, Constants.REFRESH_RATE * 1000);
 
 
         while(true) {}
